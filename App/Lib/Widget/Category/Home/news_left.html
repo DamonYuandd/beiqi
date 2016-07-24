@@ -1,0 +1,10 @@
+  <volist name="categoryList" id="vo">
+      <?php  
+      		$url = U(MODULE_NAME.'/index',array('cid'=>$vo['id']));
+      ?>
+    <eq name="vo.id" value="$cid">
+        <li><a class="cur" href="{$url}">{$vo.title}</a></li>
+    <else/>
+       <li><a href="{$url}">{$vo.title}</a></li>
+    </eq>
+  </volist>

@@ -1,0 +1,22 @@
+	   <div class="news_lists">
+	    <volist name="dataList" id="vo" empty="没有相关信息">
+        <div class="view1">
+          <div class="view2">
+            <div class="view21">用户名：{$vo.linkman}</div>
+            <div class="view22">留言时间：{$vo.create_time|date="Y-m-d H:i:s",###}</div>
+          </div>
+          <div class="view3">
+            <p><span>留言标题：</span>{$vo.title}</p>
+            <p><span>留言内容：</span>{$vo.content}</p>
+          </div>
+          <div class="view4">管理员回复：<span>{$vo.reply}</span></div>
+        </div>
+		</volist>
+
+     
+        </div>
+           <div class="news_next">
+         {$pageBar}
+      </div>
+      <div style="clear:both;"></div>
+      <div style="clear:both;"></div>

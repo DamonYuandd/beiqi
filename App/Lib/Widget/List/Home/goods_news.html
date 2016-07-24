@@ -1,0 +1,18 @@
+        <div class="page_right_show">
+          <div class="page_right_show_add">您当前的位置：首页 &gt; <a href="{:U('Goods/index')}">{$location[1]['title']}</a> &gt; {$location[2]['title']}</div>
+          <div class="page_right_products">
+           <volist name="dataList" id="vo" empty="没有相关信息">
+            <div class="products_box">
+              <div class="products_box_img"><a href="{:U('Goods/show',array('cid' => $vo['category_id'],'id' => $vo['id']))}"><img src="{:echoImg($vo['image'],'200','200')}" width="200" height="200" /></a></div>
+              <div class="products_box_title">
+                <p>{$vo.title|str_cut=0,12}</p>
+                <p><a href="{:U('Goods/show',array('cid' => $vo['category_id'],'id' => $vo['id']))}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+              </div>
+            </div>
+			</volist>
+            <div style="clear:both;"></div>
+            <div class="news_next">
+              <div style="text-align: right;">{$pageBar}</div>
+            </div>
+          </div>
+        </div>

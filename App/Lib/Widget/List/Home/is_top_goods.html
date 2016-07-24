@@ -1,0 +1,9 @@
+<volist name="dataList" id="vo" empty="没有相关信息">
+      <div class="pro_box">
+          <div class="pro_box_img"><a href="__APP__/<?php echo MODULE_NAME; ?>/show/cid/{$vo.category_id}/id/{$vo.id}.html" >
+          <img src="__PUBLIC__/images/product/m_{$vo.image}" width="500" height="376" /></a>
+          </div>
+          <div class="pro_box_d"><a href="__APP__/<?php echo MODULE_NAME; ?>/show/cid/{$vo.category_id}/id/{$vo.id}.html" >{$vo.title|str_cut=0,20}</a></div>
+        </div>
+         </volist>
+     

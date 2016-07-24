@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<layout name="Home:Inc:script" cache="0" />
+<script>
+$(document).ready(function() { 
+    $('.submit').click(function(){ 
+	    	if(document.getElementById('title').value==''){
+				alert('{%info_title}');
+				document.getElementById("title").focus();
+				return false;
+			}
+			if(document.getElementById('content').value==''){
+				alert('{%info_content}');
+				document.getElementById("content").focus();
+				return false;
+			}
+			if(document.getElementById('linkman').value==''){
+    			alert('{%info_name}');
+    			document.getElementById("linkman").focus();
+    			return false;
+    		}
+			 
+			if(document.getElementById('address').value==''){
+    			alert('请填写联系地址');
+    			document.getElementById("address").focus();
+    			return false;
+    		}
+    		
+    		if(document.getElementById('tel').value==''){
+    			alert('{%info_tel}');
+    			document.getElementById("tel").focus();
+    			return false;
+    		}
+    		if(document.getElementById('email').value==''){
+    			alert('请填写电子信箱');
+    			document.getElementById("email").focus();
+    			return false;
+    		}
+    		if(document.getElementById("email").value!=""){		
+  				var CheckMail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;			
+  				if (!CheckMail.test(document.getElementById("email").value))
+  	  			{
+  	  			  alert("{%info_email}");
+  	  			  document.getElementById("email").focus();
+  	  			  return false;
+  	  			}
+  			}
+    		if(document.getElementById('verify').value==''){
+    			alert('{%info_verifycode}');
+    			document.getElementById("verify").focus();
+    			return false;
+    		}
+    		$("#form1").submit();
+        });
+}); 
+
+function fleshVerify(type){ 
+	 
+	var timenow = new Date().getTime();
+	if (type){
+		document.getElementById('verifyImg').src= '__APP__/Index/verify/adv/1/'+timenow;
+	}else{
+		document.getElementById('verifyImg').src= '__APP__/Index/verify/'+timenow;
+	}
+}
+</script>
+</head>
+<body>
+<layout name="Home:Inc:kefu" cache="0" />
+<div style="clear:both;"></div>
+<div style="background:url(__HOME__/images/header_bg.jpg);">
+  <layout name="Home:Inc:nav" cache="0" />
+</div>
+<div style="clear:both;"></div>
+<div style="clear:both;"></div>
+<div style="clear:both;"></div>
+<div style="background:#FFFFFF;">
+  <layout name="Home:Inc:insideAdv" cache="0" />
+  <div style="clear:both;"></div>
+  <div style="background:#f5f5f5;">
+    <div id="page_center">
+      <div class="p_left">
+        <div class="p_left_title">
+          <p><span style=" color:#fff;">FEEDBACK</span></p>
+          <p style=" color:#fff;">在线留言</p>
+        </div>
+        <ul>
+          <li><a href="{:U('Guestbook/index')}">填写留言</a></li>
+          <<layout name="Home:Inc:leftNav" cache="0" />
+        </ul>
+      </div>
+      <div class="page_right">
+        <div class="page_right_show">
+          <div class="page_right_show_add">您当前的位置：首页 &gt; <a href="{:U('Guestbook/index')}">在线留言</a> &gt; 填写留言</div>
+          <div class="page_right_show_details">
+            <p align="center" style=" font-size:26px; font-weight:bold;">&nbsp;</p>
+            <p align="center" style=" font-size:26px; font-weight:bold;"><strong>期待您的意见与建议</strong></p>
+            <p align="center" style=" font-size:20px; font-weight:bold;">&nbsp;</p>
+            <form id="form1" name="form1" method="post" action="__APP__/Guestbook/guestbookSave">
+            <table width="76%" height="582" border="0" align="center">
+              <tr>
+                <td colspan="2"><p align="left">&nbsp;</p></td>
+              </tr>
+              <tr>
+                <td width="52%"><p align="left">* <strong>您的姓名</strong></p></td>
+                <td width="48%">* <strong>您的电话</strong></td>
+              </tr>
+              <tr>
+                <td width="52%"><input name="linkman" type="text" id="linkman" style=" width:300px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"   /></td>
+                <td width="48%"><input name="tel" type="text" id="tel" style=" width:300px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"   /></td>
+              </tr>
+              <tr>
+                <td width="52%"><p align="left">&nbsp;&nbsp;<strong>您的地址</strong></p></td>
+                <td width="48%">&nbsp;<strong>&nbsp;您的邮箱</strong></td>
+              </tr>
+              <tr>
+                <td width="52%"><input name="address" type="text" id="address" style=" width:300px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"   /></td>
+                <td width="48%"><input name="email" type="text" id="email" style=" width:300px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"/></td>
+              </tr>
+               
+              <tr>
+                <td width="52%"><p align="left">*<strong> 留言标题</strong></p></td>
+                <td width="48%">&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="2"><input name="title" type="text" id="title" style=" width:660px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p align="left">*&nbsp;<strong>留言内容</strong></p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><textarea name="content" rows="10" id="content" style=" width:660px; height:150px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;" ></textarea></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p align="left">* <strong>验证码</strong></p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p align="left">
+                    <input name="verify" type="text" id="verify" style=" width:200px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"   />
+                    <img id="verifyImg" src="__APP__/Index/verify" onClick="fleshVerify()" width="74" height="23" /> </p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><div align="center" style="height:50px; padding-top:15px;">
+                    <p>&nbsp;</p>
+                    <p><a href="javascript:void(0)" class="submit"><img src="__HOME__/images/bottom_tj.jpg" alt="提交留言" width="124" height="38" border="0" style="margin-right:15px;" /></a><a href="#"><img src="__HOME__/images/bottom_tx.jpg" alt="重新填写" width="124" height="38" border="0" /></a></p>
+                  </div></td>
+              </tr>
+            </table>
+            </form>
+            <p align="center" style=" font-size:20px; font-weight:bold;">&nbsp;</p>
+          </div>
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+  <layout name="Home:Inc:link" cache="0" />
+  <div style="clear:both;"></div>
+  <layout name="Home:Inc:footer" cache="0" />
+</div>
+</body>
+</html>

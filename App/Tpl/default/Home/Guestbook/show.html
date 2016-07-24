@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<layout name="Home:Inc:script" cache="0" />
+</head>
+<body style="background:url(__HOME__/images/bg6.jpg) center top no-repeat;">
+<layout name="Home:Inc:header" cache="0" />
+<div id="banner_page_img"><img src="__HOME__/images/t6.png" width="1040" height="65" /></div>
+<div id="banner_page_add">
+  <div class="weibo">
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style"> <a class="jiathis_button_qzone"></a> <a class="jiathis_button_tsina"></a> <a class="jiathis_button_tqq"></a> <a class="jiathis_button_renren"></a> <a class="jiathis_button_kaixin001"></a> <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a> <a class="jiathis_counter_style"></a> </div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1374890429635147" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+  </div>
+  您当前所在的位置：<a href="__APP__">首页</a> > <a href="__APP__/Guestbook">在线留言</a> > 查看留言</div>
+<div id="nav_line">
+  <ul>
+    <li><a href="__APP__/Guestbook"  >填写留言</a></li>
+    <li><a href="__APP__/Guestbook/show"  class="cur">查看留言</a></li>
+  </ul>
+</div>
+<div id="page_center">
+  <div class="page_right">
+    <div class="page_right_concent">
+      <div class="news_img"><img src="__HOME__/images/img06.jpg" /></div>
+	  {:Y('List',array('style'=>'message','rowpage'=>'5','model'=>'Guestbook','alias'=>'Guestbook/view','tplNum' => 'Home'))}
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+<layout name="Home:Inc:footer" cache="0" />
+</body>
+</html>
