@@ -279,9 +279,9 @@ function getNewsByList($alias,$is_home = 1,$hardware = 'pc'){
 			$hardware = 'pc';
 		}	
 		if($num){
-			$Ftitle = $cate->where(array('pid' => $cid['id'],'is_publish' => 1,'lang' => L('language'),'hardware' => $hardware))->order('ordernum desc, id desc')->limit($num)->select();
+			$Ftitle = $cate->where(array('pid' => $cid['id'],'is_publish' => 1,'lang' => L('language'),'hardware' => $hardware))->order('ordernum desc, id asc')->limit($num)->select();
 		}else{
-		$Ftitle = $cate->where(array('pid' => $cid['id'],'is_publish' => 1,'lang' => L('language'),'hardware' => $hardware))->order('ordernum desc, id desc')->select();}
+		$Ftitle = $cate->where(array('pid' => $cid['id'],'is_publish' => 1,'lang' => L('language'),'hardware' => $hardware))->order('ordernum desc, id asc')->select();}
 		return $Ftitle;
 	}
 //获取公共信息
@@ -464,7 +464,11 @@ function echoImg($img,$w,$h,$path="product"){
 		echo __HOME__."/images/not.jpg";
 		return false;
 	}else{
-		$str = __ROOT__.'/outPutImg.php?url=http://'.$_SERVER['HTTP_HOST'].'/'.__PUBLIC__.'/images/'.$path.'/m_'.$img.'&pw='.$w.'&ph='.$h;
+	    if($path == 'category'){
+	       $str = __ROOT__.'/outPutImg.php?url=http://'.$_SERVER['HTTP_HOST'].'/'.__PUBLIC__.'/images/'.$path.'/'.$img.'&pw='.$w.'&ph='.$h;
+	    }else{
+		  $str = __ROOT__.'/outPutImg.php?url=http://'.$_SERVER['HTTP_HOST'].'/'.__PUBLIC__.'/images/'.$path.'/m_'.$img.'&pw='.$w.'&ph='.$h;
+        }
 		echo $str;
 	}
 	

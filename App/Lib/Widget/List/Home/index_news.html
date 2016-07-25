@@ -1,0 +1,11 @@
+           <volist name="dataList" id="vo" empty="没有相关信息">               
+                      <div class="news_box_list_box">
+                        <div class="news_box_list_box_img"><a href="{:U('News/show',array('cid'=>$vo['category_id'],'id'=>$vo['id']))}"><img src="{:echoImg($vo['image'],'117','100','news')}" /></a></div>
+                        <div class="news_box_list_box_text">
+                          <p><span><a href="{:U('News/show',array('cid'=>$vo['category_id'],'id'=>$vo['id']))}">{$vo.title|str_cut=0,12}</a></span></p>
+                          <p>{$vo.summary|str_cut=0,12}</p>
+                          <p><a href="{:U('News/show',array('cid'=>$vo['category_id'],'id'=>$vo['id']))}"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
+                        </div>
+                      </div>
+	         </volist>
+ 

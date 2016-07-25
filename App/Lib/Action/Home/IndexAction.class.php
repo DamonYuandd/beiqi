@@ -43,7 +43,11 @@ class IndexAction extends HomeAction
 		$this->indexGoods();
 		$this->assign('ads',$ads);
 		$this->assign('indexNews',$indexNews);
-		 
+        
+        //获取分类
+        $goodCate = GoodsCate();
+         
+		$this->assign('goodCate',$goodCate); 
 		$this->display($this->web_theme.':Index:index');
 	}
 	//首页新闻列表

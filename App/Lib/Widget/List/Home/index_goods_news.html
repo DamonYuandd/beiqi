@@ -1,0 +1,9 @@
+           <volist name="dataList" id="vo" empty="没有相关信息">
+            <div class="products_box_list_box">
+              <div class="products_box_list_box_img"><a href="{:U('Goods/show',array('cid' => $vo['category_id'],'id' => $vo['id']))}"><img src="{:echoImg($vo['image'],'200','200')}" width="200" height="200" /></a></div>
+              <div class="products_box_list_box_text">
+                <p><a href="{:U('Goods/show',array('cid' => $vo['category_id'],'id' => $vo['id']))}">{$vo.title|str_cut=0,12}</a></p>
+                <p>{$vo.summary|str_cut=0,12}</p>
+              </div>
+            </div>
+			</volist>

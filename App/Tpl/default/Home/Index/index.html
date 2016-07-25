@@ -52,139 +52,15 @@ $(document).ready(function(){
 <div style=" background:url(__HOME__/images/line1.png);">
   <div id="line1"></div>
 </div>
-<div id="products_box">
-  <div class="products_box_title"><img src="__HOME__/images/b1.png" style="float:left;" /><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
-  <div class="products_box_list">
-    <div id="pf"></div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p1.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
+  <volist name="goodCate" id="vo">
+  <div id="products_box">
+          <div class="products_box_title"><img src="__PUBLIC__/images/category/{$vo['image']}" style="float:left;" /><a href="{:U('Goods/index',array('cid' => $vo['id']))}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
+          <div class="products_box_list">
+            <div id="pf"></div>
+            {:Y('List',array('style'=>'index_goods_news','model'=>'Goods','rowpage'=>4,'tplNum' => 'Home','userNum' => $USER_CNUM,'isHome' => 1,'cid' => $vo['id']))}
+          </div>
     </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p2.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p3.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p4.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="products_box">
-  <div class="products_box_title"><img src="__HOME__/images/b2.png" style="float:left;" /><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
-  <div class="products_box_list">
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p5.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p6.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p7.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p8.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="products_box">
-  <div class="products_box_title"><img src="__HOME__/images/b3.png" style="float:left;" /><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
-  <div class="products_box_list">
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p9.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p10.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p11.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p12.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="products_box">
-  <div class="products_box_title"><img src="__HOME__/images/b4.png" style="float:left;" /><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
-  <div class="products_box_list">
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p13.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p14.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p15.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-    <div class="products_box_list_box">
-      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p16.jpg" width="200" height="200" /></a></div>
-      <div class="products_box_list_box_text">
-        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
-        <p>柔软UP 特薄弹力腰围</p>
-      </div>
-    </div>
-  </div>
-</div>
+</volist>
 <div style=" background:url(__HOME__/images/index_14.jpg);">
   <div id="line2"></div>
 </div>
@@ -192,54 +68,7 @@ $(document).ready(function(){
   <div id="news_box">
     <div class="news_box_title"><a href="{:U('News/index')}"><img src="__HOME__/images/news.jpg" /></a></div>
     <div class="news_box_list">
-      <div class="news_box_list_box">
-        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n1.jpg" /></a></div>
-        <div class="news_box_list_box_text">
-          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
-          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
-          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
-        </div>
-      </div>
-      <div class="news_box_list_box">
-        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n2.jpg" /></a></div>
-        <div class="news_box_list_box_text">
-          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
-          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
-          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
-        </div>
-      </div>
-      <div class="news_box_list_box">
-        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n3.jpg" /></a></div>
-        <div class="news_box_list_box_text">
-          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
-          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
-          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
-        </div>
-      </div>
-      <div class="news_box_list_box">
-        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n3.jpg" /></a></div>
-        <div class="news_box_list_box_text">
-          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
-          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
-          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
-        </div>
-      </div>
-      <div class="news_box_list_box">
-        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n1.jpg" /></a></div>
-        <div class="news_box_list_box_text">
-          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
-          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
-          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
-        </div>
-      </div>
-      <div class="news_box_list_box">
-        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n2.jpg" /></a></div>
-        <div class="news_box_list_box_text">
-          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
-          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
-          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
-        </div>
-      </div>
+        {:Y('List',array('style'=>'index_news','model'=>'News','rowpage'=>6,'tplNum' => 'Home','userNum' => $USER_CNUM,'isHome' => 1,'alias'=>'News'))}
     </div>
     <div style="clear:both;"></div>
   </div>
