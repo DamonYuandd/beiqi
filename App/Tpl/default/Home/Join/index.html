@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<layout name="Home:Inc:script" cache="0" />
+</head>
+<body onload="MM_preloadImages('__HOME__/images/images/nav1_01.png','__HOME__/images/images/nav1_03.png','__HOME__/images/images/nav1_04.png','__HOME__/images/images/nav1_05.png','__HOME__/images/images/nav1_06.png')">
+<layout name="Home:Inc:kefu" cache="0" />
+<div style="background:url(__HOME__/images/join.jpg);">
+  <div id="culture"></div>
+</div>
+<div style="clear:both;"></div>
+<div style="background:url(__HOME__/images/line.jpg) top center no-repeat;">
+  <div id="line">
+    <div id="header_page">
+  		<layout name="Home:Inc:nav" cache="0" />
+  	</div>
+  </div>
+</div>
+<div>
+  <div id="page_center">
+    {:Y('One',array('style'=>'show','model'=>'News','tplNum' => 'Home'))}
+  </div>
+</div>
+<layout name="Home:Inc:link" cache="0" />
+<layout name="Home:Inc:footer" cache="0" />
+</body>
+</html>

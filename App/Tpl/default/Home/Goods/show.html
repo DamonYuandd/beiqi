@@ -3,40 +3,41 @@
 <head>
 <layout name="Home:Inc:script" cache="0" />
 </head>
-<body>
+<body  style="background:url(__HOME__/images/bg2.png) center top scroll #59c6ff;" onload="MM_preloadImages('__HOME__/images/images/nav1_01.png','__HOME__/images/images/nav1_03.png','__HOME__/images/images/nav1_05.png','__HOME__/images/images/nav1_06.png')">
 <layout name="Home:Inc:kefu" cache="0" />
-<div style="clear:both;"></div>
-<div style="background:url(__HOME__/images/header_bg.jpg);">
-  <layout name="Home:Inc:nav" cache="0" />
+<div style="background:url(__HOME__/images/products.jpg);">
+  <div id="culture"></div>
 </div>
 <div style="clear:both;"></div>
-<div style="clear:both;"></div>
-<div style="clear:both;"></div>
-<div style="background:#FFFFFF;">
-  <layout name="Home:Inc:insideAdv" cache="0" />
-  <div style="clear:both;"></div>
-  <div style="background:#f5f5f5;">
-    <div id="page_center">
-      <div class="p_left">
-        <div class="p_left_title">
-          <p><span style=" color:#fff;">PRODUCTS</span></p>
-          <p style=" color:#fff;">产品展示</p>
-        </div>
-        <ul>
-         {:Y('Category',array('style'=>'left','model'=>'Category','tplNum' => 'Home','userNum' => $USER_CNUM,'alias'=>'Goods'))}
-          <!--下拉菜单-->
-          <layout name="Home:Inc:leftNav" cache="0" />
-        </ul>
+<div style="background:url(__HOME__/images/line.jpg) top center no-repeat;">
+  <div style="background:url(__HOME__/images/line4.jpg) center top;">
+    <div id="line">
+      <div id="header_page">
+        <layout name="Home:Inc:nav" cache="0" />
       </div>
-      <div class="page_right">
-      	  {:Y('One',array('style'=>'product_show','model'=>'Goods','tplNum' => 'Home'))}
-      </div>
-      <div style="clear:both;"></div>
     </div>
   </div>
-  <layout name="Home:Inc:link" cache="0" />
-  <div style="clear:both;"></div>
-  <layout name="Home:Inc:footer" cache="0" />
 </div>
+<div>
+  <div id="nav_ic">
+    <ul>
+      {:Y('Category',array('style'=>'left','model'=>'Category','tplNum' => 'Home','userNum' => $USER_CNUM,'alias'=>'Goods'))}
+    </ul>
+  </div>
+  <div id="products_top1"></div>
+  <div id="products_show">
+  	{:Y('One',array('style'=>'product_show','model'=>'Goods','tplNum' => 'Home'))}
+    <div>
+      <div align="center">
+        <p>&nbsp;</p>
+        <p><a href="javascript:void(0)" onclick="javascript:history.go(-1);"><img src="__HOME__/images/back.jpg" /></a></p>
+      </div>
+    </div>
+  </div>
+  <div id="products_bottom"></div>
+  </p>
+</div>
+<layout name="Home:Inc:link" cache="0" />
+<layout name="Home:Inc:footer" cache="0" />
 </body>
 </html>

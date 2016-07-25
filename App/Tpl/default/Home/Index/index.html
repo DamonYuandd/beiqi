@@ -2,29 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <layout name="Home:Inc:script" cache="0" />
-<script type="text/javascript" src="__HOME__/js/jquery.fadethis.min.js"></script>
-<script type="text/javascript">
-	$("document").ready(function(){
-		$(window).fadeThis();
-	})
-</script>
 </head>
-<body>
+<body style="background:url(__HOME__/images/bg.png) center top scroll #59c6ff;" onload="MM_preloadImages('__HOME__/images/images/nav1_01.png','__HOME__/images/images/nav1_02.png','__HOME__/images/images/nav1_03.png','__HOME__/images/images/nav1_04.png','__HOME__/images/images/nav1_05.png','__HOME__/images/images/nav1_06.png')">
 <layout name="Home:Inc:kefu" cache="0" />
-<div style="clear:both;"></div>
-<div style="background:url(__HOME__/images/header_bg.jpg);">
-	<layout name="Home:Inc:nav" cache="0" />
-  
-</div>
-<div style="clear:both;"></div>
 <!--广告-->
 <div class="flexslider">
   <ul class="slides">
-  	<volist name="ads" id="vo">
-    	<li href-data="{$vo.url}" onclick="javascript:window.location.href=this.getAttribute('href-data')" style="background:url(__PUBLIC__/images/advert/m_{$vo.image}) 50% 0 no-repeat; cursor:pointer;"></li>
-    </volist>
+  <volist name="ads" id="vo">
+    <li href-data="{$vo.url}" onclick="javascript:window.location.href=this.getAttribute('href-data')" style="background:url(__PUBLIC__/images/advert/m_{$vo.image}) 50% 0 no-repeat; cursor:pointer;"></li>
+   </volist>
   </ul>
 </div>
+<script type="text/javascript" src="__HOME__/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="__HOME__/js/jquery.flexslider-min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -36,154 +25,226 @@ $(document).ready(function(){
 </script>
 <!--广告-->
 <div style="clear:both;"></div>
-<div style="background:url(__HOME__/images/about_bg.jpg);">
-  <div id="about">
-    <div class="about_box1">
-      <div class="about_box1_img"><a href="{:U('About/index')}"><img src="__HOME__/images/img1.jpg" alt="公司简介" /></a></div>
-      <div class="about_box1_txt">
-        <p><span>公司简介</span></p>
-        <p><img src="__HOME__/images/line.png" /></p>
-        <p>昆山金联鑫精密五金制品厂创立于2007年3月，</p>
-        <p>是半导体、光伏、PCB等行业精密配件及周边设备</p>
-        <p>领先的专业制造商。<br />
-        </p>
+  <div id="line">
+    <div id="header">
+		<layout name="Home:Inc:nav" cache="0" />
+	</div>
+</div>
+<div id="about">
+  <div class="about_video">
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="141" height="112">
+      <param name="movie" value="__HOME__/flvplayer.swf">
+      <param name="quality" value="high">
+      <param name="allowFullScreen" value="true" />
+      <param name="FlashVars" value="vcastr_file=__HOME__/obj.flv" />
+      <embed src="__HOME__/flvplayer.swf" allowFullScreen="true" FlashVars="vcastr_file=__HOME__/obj.flv" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="141" height="112"></embed>
+    </object>
+  </div>
+  <div class="about_text">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><span style=" font-size:38px; line-height:25px; font-weight:bold; color:#12449b;">品牌介绍</span></p>
+    <p><span style=" font-size:20px; line-height:25px; font-weight:bold; color:#41b0fe;">Brand Introduction</span></p>
+    <p>贝奇国际公社（韩国）有限公司 创立于20世纪 , 是韩国知名的品牌, 凭最先进的生产技术及最强大的研发团队，坚持为消费者提供最安全、最专业、最优质、最环保的婴幼儿产品。贝奇主要生产婴儿用品包括婴儿纸尿裤、婴儿纸尿片和婴儿专用清洁用品。贴心呵护宝宝成长，是您值得信赖的好伙伴,全方位呵护宝宝，贝奇纸尿裤采用“五层锁水”芯体结构，令贝奇产品超级柔软，超薄，而且吸收容量大、干爽、透气、不起坨、不断裂,可令宝宝一晚一片不漏尿。</p>
+    <p>贝奇纸尿裤采用绿茶因子酉阳茶净芯体，清爽、防止红疹，更引入全国首创专利环保包装双重呵护健康，避免产品二次污染。贝奇通过深入研究宝宝的成长环境，开发出多方位关爱宝宝的产品，妈妈育儿更安全无忧。</p>
+  </div>
+</div>
+<div style=" background:url(__HOME__/images/line1.png);">
+  <div id="line1"></div>
+</div>
+<div id="products_box">
+  <div class="products_box_title"><img src="__HOME__/images/b1.png" style="float:left;" /><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
+  <div class="products_box_list">
+    <div id="pf"></div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p1.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
       </div>
     </div>
-    <div class="about_box1">
-      <div class="about_box1_img"><a href="{:U('Equipment/index')}"><img src="__HOME__/images/img2.jpg" alt="生产设备" /></a></div>
-      <div class="about_box1_txt">
-        <p><span>生产设备</span></p>
-        <p><img src="__HOME__/images/line.png" /></p>
-        <p>工厂总部于广东东莞 , 厂房建筑面积2000㎡。</p>
-        <p>已于2007年12月通过了国际认证ISO9001 : 2000</p>
-        <p>质量管理体系。<br />
-          <br />
-        </p>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p2.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
       </div>
     </div>
-    <div class="about_box2">
-      <div class="about_box1_img"><a href="{:U('Services/index')}"><img src="__HOME__/images/img3.jpg" alt="技术服务" /></a></div>
-      <div class="about_box1_txt">
-        <p><span>技术服务</span></p>
-        <p><img src="__HOME__/images/line.png" /></p>
-        <p>我们为客户提供优质及完善的产品售后服务，</p>
-        <p>公司凭借产品可靠及稳定的质量以及用户的信赖，可以</p>
-        <p>满足客户不断发展的需求。</p>
-        <p></p>
-        <p><br />
-        </p>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p3.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p4.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
       </div>
     </div>
   </div>
 </div>
-<div style="clear:both;"></div>
+<div id="products_box">
+  <div class="products_box_title"><img src="__HOME__/images/b2.png" style="float:left;" /><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
+  <div class="products_box_list">
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p5.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p6.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p7.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p8.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="products_box">
+  <div class="products_box_title"><img src="__HOME__/images/b3.png" style="float:left;" /><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
+  <div class="products_box_list">
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p9.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p10.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p11.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p12.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="products_box">
+  <div class="products_box_title"><img src="__HOME__/images/b4.png" style="float:left;" /><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.png" alt="更多产品"  style="float:right;"/></a></div>
+  <div class="products_box_list">
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p13.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p14.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p15.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+    <div class="products_box_list_box">
+      <div class="products_box_list_box_img"><a href="products_details.html"><img src="__HOME__/images/p16.jpg" width="200" height="200" /></a></div>
+      <div class="products_box_list_box_text">
+        <p><a href="products_details.html">柔薄至尊装纸尿裤</a></p>
+        <p>柔软UP 特薄弹力腰围</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div style=" background:url(__HOME__/images/index_14.jpg);">
+  <div id="line2"></div>
+</div>
 <div style="background:#FFFFFF;">
-  <div id="products">
-    <div class="products_title">
-      <p>PRODUCTS <span>产品推荐</span></p>
-      <p><img src="__HOME__/images/line1.png" width="128" /></p>
+  <div id="news_box">
+    <div class="news_box_title"><a href="{:U('News/index')}"><img src="__HOME__/images/news.jpg" /></a></div>
+    <div class="news_box_list">
+      <div class="news_box_list_box">
+        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n1.jpg" /></a></div>
+        <div class="news_box_list_box_text">
+          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
+          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
+          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
+        </div>
+      </div>
+      <div class="news_box_list_box">
+        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n2.jpg" /></a></div>
+        <div class="news_box_list_box_text">
+          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
+          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
+          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
+        </div>
+      </div>
+      <div class="news_box_list_box">
+        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n3.jpg" /></a></div>
+        <div class="news_box_list_box_text">
+          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
+          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
+          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
+        </div>
+      </div>
+      <div class="news_box_list_box">
+        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n3.jpg" /></a></div>
+        <div class="news_box_list_box_text">
+          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
+          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
+          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
+        </div>
+      </div>
+      <div class="news_box_list_box">
+        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n1.jpg" /></a></div>
+        <div class="news_box_list_box_text">
+          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
+          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
+          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
+        </div>
+      </div>
+      <div class="news_box_list_box">
+        <div class="news_box_list_box_img"><a href="news_details.html"><img src="__HOME__/images/n2.jpg" /></a></div>
+        <div class="news_box_list_box_text">
+          <p><span><a href="news_details.html">带给孩子的应该是快乐</a></span></p>
+          <p>阅读不仅能够开发孩子的智商还有助于培养孩子的情商...</p>
+          <p><a href="news_details.html"><img src="__HOME__/images/more.jpg" width="69" height="24" style="margin-top:10px;" /></a></p>
+        </div>
+      </div>
     </div>
-    <div class="products_list">
-      <div class="products_list_box">
-        <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p1.jpg" /></a></div>
-        <div class="products_list_title">
-          <p>推车系列</p>
-          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
-        </div>
-      </div>
-      <div class="products_list_box">
-        <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p2.jpg" /></a></div>
-        <div class="products_list_title">
-          <p>板式换热器</p>
-          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
-        </div>
-      </div>
-      
-      <div class="products_list_box">
-        <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p3.jpg" /></a></div>
-        <div class="products_list_title">
-          <p>板式换热器</p>
-          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
-        </div>
-      </div>
-      
-      <div class="products_list_box">
-        <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p4.jpg" /></a></div>
-        <div class="products_list_title">
-          <p>PP上滚轮</p>
-          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
-        </div>
-      </div>
-      <div class="products_list_box">
-        <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p5.jpg" /></a></div>
-        <div class="products_list_title">
-          <p>探温针</p>
-          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
-        </div>
-      </div>
-      <div class="products_list_box">
-        <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p6.jpg" /></a></div>
-        <div class="products_list_title">
-          <p>桶式铁氟龙换热器</p>
-          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
-        </div>
-      </div>
-      <div class="products_list_box">
-        <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p7.jpg" /></a></div>
-        <div class="products_list_title">
-          <p>铁氟龙换热器</p>
-          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
-        </div>
-      </div>
-      <div class="products_list_box">
-        <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p8.jpg" /></a></div>
-        <div class="products_list_title">
-          <p>自动流水线</p>
-          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
-        </div>
-      </div>
-      <div style="clear:both;"></div>
-    </div>
+    <div style="clear:both;"></div>
   </div>
-  <div style="clear:both;"></div>
-  <div style=" background:url(__HOME__/images/news_bg.jpg) repeat-x scroll #f7f7f7;">
-    <div id="news">
-      <div class="products_title">
-        <p>NEWS <span>新闻资讯</span></p>
-        <p><img src="__HOME__/images/line1.png" width="128" /></p>
-      </div>
-      <div class="news_index_box">
-        <div class="news_box_list slide-left">
-          <div class="news_box_list2">
-            <p><a href="{:U('News/show',array('cid'=>$indexNews[0]['category_id'],'id'=>$indexNews[0]['id']))}">{$indexNews[0]['title']}</a></p>
-            <p>{$indexNews[0]['summary']|str_cut=0,100}</p>
-            <p align="right">{$indexNews[0]['create_time']|date="Y-m-d",###}</p>
-          </div>
-          <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[0]['category_id'],'id'=>$indexNews[0]['id']))}"><img src="{:echoImg($indexNews[0]['image'],'400','220','news')}" /></a></div>
-        </div>
-        <div class="news_box_list slide-top">
-          <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[1]['category_id'],'id'=>$indexNews[1]['id']))}"><img src="{:echoImg($indexNews[1]['image'],'400','220','news')}" /></a></div>
-          <div class="news_box_list2">
-            <p><a href="{:U('News/show',array('cid'=>$indexNews[1]['category_id'],'id'=>$indexNews[1]['id']))}">{$indexNews[1]['title']}</a></p>
-            <p>{$indexNews[1]['summary']|str_cut=0,100}</p>
-            <p align="right">{$indexNews[1]['create_time']|date="Y-m-d",###}</p>
-          </div>
-        </div>
-        <div class="news_box_list slide-right">
-          <div class="news_box_list2">
-            <p><a href="{:U('News/show',array('cid'=>$indexNews[2]['category_id'],'id'=>$indexNews[2]['id']))}">{$indexNews[2]['title']}</a></p>
-            <p>{$indexNews[2]['summary']|str_cut=0,100}</p>
-            <p align="right">{$indexNews[2]['create_time']|date="Y-m-d",###}</p>
-          </div>
-          <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[2]['category_id'],'id'=>$indexNews[2]['id']))}"><img src="{:echoImg($indexNews[2]['image'],'400','220','news')}" /></a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="clear:both;"></div>
-  <layout name="Home:Inc:link" cache="0" />
-  <div style="clear:both;"></div>
-  <layout name="Home:Inc:footer" cache="0" />
 </div>
+<layout name="Home:Inc:link" cache="0" />
+<layout name="Home:Inc:footer" cache="0" />
 </body>
 </html>

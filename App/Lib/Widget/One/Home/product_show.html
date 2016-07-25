@@ -1,31 +1,9 @@
-<?php 
-	$goodsImgs = selectGoodsPhoto();	//产品图片
-    $num = count($goodsImgs);
-?>
-     
-        <div class="page_right_show">
-         
-          <div class="page_right_show_add">您当前的位置：首页 &gt; <a href="{:U($location[1]['alias'].'/index')}">{$location[1]['title']}</a> &gt; {$location[2]['title']}</div>
-          <div class="page_right_show_details">
-            <div class="case_title">
-              <p>{$obj.title}</p>
-              <p><span>发布时间：{$obj.create_time|date="Y-m-d",###} </span></p>
-            </div>
-            <notempty name="goodsImgs">
-            <div class="page_right_concent">
-	              <div align="center">
-	              	<volist name="goodsImgs" id="vo">
-	              		<img src="{:echoImg($vo['image'],600,600)}" />
-	              	</volist>
-	              </div>
-            </div>
-            </notempty>
-            <div class="title_bg">产品介绍</div>
-            <div class="page_right_pro">
-              {$obj.content|htmlspecialchars_decode}
-            </div>
-            <div class="news_next">
-              <div align="center"><a href="{:U($location[1]['alias'].'/index')}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回上一级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
-            </div>
-          </div>
-        </div>
+    <div class="products_show1">
+      <p align="center"><span style="font-size:38px; font-weight:bold; line-height:50px; color:#12449b;">{$obj.title}</span></p>
+      <p align="center">关注人数：{$obj.click_count} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="__HOME__/images/tm.jpg" width="17" height="18" style="margin-top:10px;" /><a href="{$obj.tm_link}" target="_blank"> 天猫在线购买</a></p>
+    </div>
+    <div class="products_show3">
+      <div align="center">
+        {$obj.content|htmlspecialchars_decode}
+      </div>
+    </div>
