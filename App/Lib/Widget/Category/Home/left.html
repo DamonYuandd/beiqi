@@ -1,6 +1,6 @@
 <volist name="categoryList" id="vo">            	
     <li>
-		<div class="nav_ic_img"><img src="__HOME__/images/ic1.png" /></div>
+		<div class="nav_ic_img"><img width="55" height="48" src="__PUBLIC__/images/category/{$vo.icon}" /></div>
 		<a <eq name="_GET['cid']" value="$vo['id']">class="cur"</eq> href="{:U('Goods/index',array('cid' => $vo['id']))}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.title}</a>
 	</li>
 </volist>

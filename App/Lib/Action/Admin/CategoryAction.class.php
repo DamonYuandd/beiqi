@@ -57,8 +57,15 @@ class CategoryAction extends AdminAction {
 		if( !empty($image) ) {
 			$_POST['image'] = $image;
 		}
+		
+		$icon = $this->_img_upload('category','icon',false);
+		if( !empty($icon) ) {
+			$_POST['icon'] = $icon;
+		}
+		
 		$data = $_POST;
-
+	
+		
 		if( empty($data['id']) ) {
 			$pid = $data['pid'];
 			$levels = $this->modelDao->getField('levels', array('id'=>$pid));

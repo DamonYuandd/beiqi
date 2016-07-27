@@ -113,6 +113,7 @@ $(function(){
 		}
 	});
 	
+	
 	//表单提交有分类需要选择提示
 	$(':submit[name=save]').click(function(event){
 		if($('#one_category_id').is(':visible')) {
